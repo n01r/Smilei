@@ -80,8 +80,8 @@ PY_CXXFLAGS := $(shell $(PYTHONCONFIG) --includes)
 CXXFLAGS += $(PY_CXXFLAGS)
 PY_LDFLAGS := $(shell $(PYTHONCONFIG) --ldflags)
 LDFLAGS += $(PY_LDFLAGS)
-ifneq ($(strip $(PYTHONHOME)),)
-    LDFLAGS += -L$(PYTHONHOME)/lib
+ifneq ($(strip $(PYTHON3_ROOT)),)
+    LDFLAGS += -L$(PYTHON3_ROOT)/lib
 endif
 
 my_config:=$(config)

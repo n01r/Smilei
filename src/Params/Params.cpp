@@ -54,7 +54,7 @@ double normal( double stddev )
 #if !defined(NUMPY_IMPORT_ARRAY_RETVAL) || (EXPAND(NUMPY_IMPORT_ARRAY_RETVAL) == 1)
 void smilei_import_array()   // python 2
 {
-    import_array();
+    _import_array();
 }
 #else
 void *smilei_import_array()   // hack for python3
